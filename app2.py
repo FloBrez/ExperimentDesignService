@@ -7,16 +7,27 @@ import numpy as np
 
 # st.set_page_config(layout='wide')
 
-page_bg_img = '''
-<style>
-body {
-background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
-background-size: cover;
-}
-</style>
-'''
+def set_bg_hack_url():
+    '''
+    A function to unpack an image from url and set as bg.
+    Returns
+    -------
+    The background.
+    '''
+        
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
+             background-size: cover
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
 
-st.markdown(page_bg_img, unsafe_allow_html=True)
+set_bg_hack_url()
 
 st.title('Meine Streamlit App')
 

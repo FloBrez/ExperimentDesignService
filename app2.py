@@ -4,6 +4,7 @@ from datetime import date, datetime
 import time
 import pandas as pd
 import numpy as np
+from utils import img_to_bytes
 
 # st.set_page_config(layout='wide')
 
@@ -29,8 +30,14 @@ def set_bg_hack_url():
 
 #set_bg_hack_url()
 
-st.image('https://images.unsplash.com/photo-1542281286-9e0a16bb7366', caption='Sunrise by the mountains')
+#st.image('https://images.unsplash.com/photo-1542281286-9e0a16bb7366', caption='Sunrise by the mountains')
 
+header_html = "<img src='data:image/png;base64,{}' class='img-fluid'>".format(
+    img_to_bytes("header.png")
+)
+st.markdown(
+    header_html, unsafe_allow_html=True,
+)
 
 st.title('Meine Streamlit App')
 

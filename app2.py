@@ -27,7 +27,10 @@ def set_bg_hack_url():
          unsafe_allow_html=True
      )
 
-set_bg_hack_url()
+#set_bg_hack_url()
+
+st.image('https://images.unsplash.com/photo-1542281286-9e0a16bb7366', caption='Sunrise by the mountains')
+
 
 st.title('Meine Streamlit App')
 

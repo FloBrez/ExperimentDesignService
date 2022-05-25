@@ -7,6 +7,17 @@ import numpy as np
 
 # st.set_page_config(layout='wide')
 
+page_bg_img = '''
+<style>
+body {
+background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
+background-size: cover;
+}
+</style>
+'''
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
 st.title('Meine Streamlit App')
 
 body = """
